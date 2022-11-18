@@ -1,5 +1,6 @@
 defmodule HartingWeb.Router do
   use HartingWeb, :router
+  import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,7 @@ defmodule HartingWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/excel", ExcelLive.Index
   end
 
   # Other scopes may use custom stacks.
