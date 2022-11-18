@@ -16,7 +16,7 @@ defmodule Harting.Application do
       HartingWeb.Endpoint,
       # Start a worker by calling: Harting.Worker.start_link(arg)
       # {Harting.Worker, arg}
-      {Desktop.Window, app: :harting, id: MainWindow, url: &HartingWeb.Endpoint.url/0}
+      # {Desktop.Window, app: :harting, id: MainWindow, url: &HartingWeb.Endpoint.url/0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

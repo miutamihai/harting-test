@@ -20,6 +20,7 @@ defmodule HartingWeb.Router do
 
     get "/", PageController, :index
     live "/excel", ExcelLive.Index
+    live "/excel/:id", ExcelLive.Show
   end
 
   # Other scopes may use custom stacks.
