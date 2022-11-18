@@ -7,6 +7,9 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
+RUN apt-get install -y python3-pip
+RUN pip3 install unoserver
+
 RUN mix local.hex --force
 
 RUN mix local.rebar --force

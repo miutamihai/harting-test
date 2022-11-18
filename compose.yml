@@ -6,3 +6,5 @@ services:
         SECRET_KEY_BASE: 6J4u4cNsTOxTX6wOqr8D4wpHA78Tli+QkVOrsI1mO71+wBf0erA8OQADKrcN2wZW
     ports:
         - '4000:4000'
+    volumes:
+      - "./priv:/app/priv"

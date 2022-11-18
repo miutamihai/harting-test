@@ -37,12 +37,20 @@ defmodule HartingWeb.ExcelLive.Show do
           <%= for row <- @rows do %>
             <tr>
               <%= for col <- row do %>
-                <td> <%= col %> </td>
+                <td> <%= render_value(col) %> </td>
               <% end %>
             </tr>
           <% end %>
         </table>
       </div>
     """
+  end
+
+  defp render_value(value) when is_tuple(value) do
+    Date.from_erl! value
+  end
+
+  defp render_value(value) do
+    value
   end
 end

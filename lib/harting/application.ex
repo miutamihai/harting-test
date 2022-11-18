@@ -14,6 +14,7 @@ defmodule Harting.Application do
       {Phoenix.PubSub, name: Harting.PubSub},
       # Start the Endpoint (http/https)
       HartingWeb.Endpoint,
+      {Task.Supervisor, name: Harting.Task.Supervisor}
       # Start a worker by calling: Harting.Worker.start_link(arg)
       # {Harting.Worker, arg}
       # {Desktop.Window, app: :harting, id: MainWindow, url: &HartingWeb.Endpoint.url/0}
