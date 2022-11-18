@@ -46,7 +46,6 @@ defmodule Harting.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:desktop, "~> 1.4"},
       {:xlsxir, "~> 1.6.4"}
     ]
   end

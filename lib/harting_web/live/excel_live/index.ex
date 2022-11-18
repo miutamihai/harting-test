@@ -2,6 +2,7 @@ defmodule HartingWeb.ExcelLive.Index do
   use HartingWeb, :live_view
 
   defp extract_table(index) do
+    # path = Path.join(Application.app_dir(:harting), "/priv/test-chart.xlsx")
     path = Path.join(Application.app_dir(:harting), "/priv/test.xlsx")
 
     Xlsxir.multi_extract(path, index)
