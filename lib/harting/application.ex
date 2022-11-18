@@ -13,9 +13,10 @@ defmodule Harting.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Harting.PubSub},
       # Start the Endpoint (http/https)
-      HartingWeb.Endpoint
+      HartingWeb.Endpoint,
       # Start a worker by calling: Harting.Worker.start_link(arg)
       # {Harting.Worker, arg}
+      {Desktop.Window, app: :harting, id: MainWindow, url: &HartingWeb.Endpoint.url/0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
